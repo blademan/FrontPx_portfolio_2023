@@ -1,0 +1,53 @@
+.about__container {
+  display: grid;
+  grid-template-columns: 35% 53%;
+  gap: 12%;
+}
+
+.about__portrait {
+  height: fit-content;
+  max-height: 40rem;
+  border: 1rem solid var(--color-white);
+  transition: var(--transition);
+}
+.about__cards {
+  margin: 3rem 0 1.5rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.about__right p {
+  margin-bottom: 0.8rem;
+}
+
+.btn__cv {
+  margin-top: 2.5rem;
+}
+
+/* MEDIA QUERIES (tablets) */
+@media screen and (max-width: 1024px) {
+  .about__left {
+    display: none;
+  }
+
+  .about__container {
+    grid-template-columns: 1fr;
+  }
+
+  .about__right h2 {
+    text-align: center;
+  }
+}
+
+/* MEDIA QUERIES (phones) */
+@media screen and (max-width: 600px) {
+  .about__cards {
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+
+  .btn__cv {
+    margin-top: 2.5rem !important;
+  }
+}
