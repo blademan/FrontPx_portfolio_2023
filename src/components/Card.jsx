@@ -1,8 +1,8 @@
 import styles from './card.module.css';
 
-export default function Card({ iconStyle, title, desc, className, Icon, onClick }) {
+export default function Card({ iconStyle, title, desc, className, Icon, onClick, theme = '' }) {
   return (
-    <article className={`${styles.card} ${styles[className]}`} onClick={onClick}>
+    <article className={`${styles.card} ${styles[className]} ${styles[theme]} `} onClick={onClick}>
       <span className={styles[iconStyle]}>{<Icon />}</span>
       {iconStyle === 'service__icon' ? (
         <div className="service__details">

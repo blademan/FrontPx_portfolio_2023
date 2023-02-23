@@ -13,7 +13,8 @@ export default function Services() {
             key={id}
             title={title}
             desc={desc}
-            className="service-light"
+            theme="light"
+            className="service"
             Icon={icon}
             iconStyle="service__icon"
           />

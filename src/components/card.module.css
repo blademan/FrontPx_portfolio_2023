@@ -12,11 +12,11 @@
   transform: translateY(-0.5rem);
 }
 
-.card.service-light {
+.card.light {
   background: var(--color-light);
 }
 
-.card.service-light:hover {
+.card.light:hover {
   background: transparent;
   border-color: var(--color-light);
 }
@@ -55,17 +55,25 @@
 }
 
 /* Service */
-
-.card.service-light {
+.card.service {
   display: flex;
   align-items: flex-start;
   gap: 1rem;
 }
 
+.service:hover .service__icon {
+  background: var(--color-light);
+  color: var(--color-primary);
+}
+
+.service h4 {
+  margin-bottom: 0.7rem;
+}
+
 .service__icon {
   background: var(--color-primary);
   padding: 0.5rem;
-  /* padding-top: 0.6rem; */
+
   width: 2.8rem;
   height: 2.8rem;
 
@@ -75,14 +83,6 @@
   transition: var(--transition);
 }
 
-.service-light:hover .service__icon {
-  background: var(--color-light);
-  color: var(--color-primary);
-}
-
-.service-light h4 {
-  margin-bottom: 0.7rem;
-}
 /* MEDIA QUERIES (phones) */
 @media screen and (max-width: 600px) {
   .card {
