@@ -8,16 +8,16 @@ export default function Services() {
       <h2>My Services</h2>
       <p>I give you the best in all the services below</p>
       <div className={`container  ${styles.services__container}`}>
-        {data.map(({ id, title, desc, icon }) => (
-          <Card
-            key={id}
-            title={title}
-            desc={desc}
-            theme="light"
-            className="service"
-            Icon={icon}
-            iconStyle="service__icon"
-          />
+        {data.map(({ id, title, desc, icon: Icon }) => (
+          <div key={id} className={styles.service}>
+            <Card className="service" theme="light">
+              <div className={styles['service__icon']}>{<Icon />}</div>
+              <div className="service__details">
+                <h4>{title}</h4>
+                <p>{desc}</p>
+              </div>
+            </Card>
+          </div>
         ))}
       </div>
     </section>

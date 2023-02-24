@@ -3,6 +3,28 @@
   grid-template-columns: 1fr 1fr;
   gap: 2rem 4rem;
 }
+.service {
+  display: contents;
+}
+
+.service__icon {
+  background: var(--color-primary);
+  padding: 0.6rem;
+  border-radius: var(--border-radius-3);
+  font-size: 1.5rem;
+  color: var(--color-white);
+  transition: var(--transition);
+  line-height: 0;
+}
+
+.service h4 {
+  margin-bottom: 0.7rem;
+}
+
+.service:hover .service__icon {
+  background: var(--color-light);
+  color: var(--color-primary);
+}
 
 /* MEDIA QUERIES (tablets) */
 @media screen and (max-width: 1024px) {
