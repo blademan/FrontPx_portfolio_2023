@@ -74,6 +74,24 @@
   margin: 0.5rem 0 2rem;
 }
 
+/* FAQ card */
+
+.faq > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 2rem;
+}
+
+.card.faq:hover {
+  background-color: var(--color-white);
+  cursor: pointer;
+}
+
+.faq h5 {
+  line-height: 1.4;
+}
+
 /* MEDIA QUERIES (phones) */
 @media screen and (max-width: 600px) {
   .card {

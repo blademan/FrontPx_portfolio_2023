@@ -4,7 +4,6 @@ import { HiDownload } from 'react-icons/hi';
 import styles from './about.module.css';
 import data from './data';
 import Card from '../../components/Card';
-import CardAbout from '../../components/CardAbout';
 
 export default function About() {
   return (
