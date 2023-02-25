@@ -59,3 +59,10 @@
 .theme__background-colors .bg-2 {
   background: #111;
 }
+
+/* MEDIA QUERIES (phones) */
+@media screen and (max-width: 1024px) {
+  .theme__primary-colors {
+    gap: 0.6rem;
+  }
+}

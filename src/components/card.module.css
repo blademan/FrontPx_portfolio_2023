@@ -139,3 +139,11 @@
     gap: 1rem;
   }
 }
+
+/* MEDIA QUERIES (phones) */
+@media screen and (max-width: 600px) {
+  .card.theme__modal {
+    width: var(--container-width-md);
+    padding: 3rem 1.5rem;
+  }
+}
