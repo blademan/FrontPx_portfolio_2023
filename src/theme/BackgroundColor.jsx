@@ -1,5 +1,7 @@
 import styles from './theme.module.css';
+import { useThemeContext } from '../context/theme-context';
 
 export default function BackgroundColor({ className }) {
-  return <button className={styles[className]}></button>;
+  const { themeHandler } = useThemeContext();
+  return <button onClick={() => themeHandler(className)} className={styles[className]}></button>;
 }

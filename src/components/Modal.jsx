@@ -4,7 +4,6 @@ import ReactDOM from 'react-dom';
 import { useModalContext } from '../context/modal-context';
 
 export default function Modal({ children, className }) {
-  console.log(className);
   const { showModal, hideModalHandler } = useModalContext();
   return (
     <>

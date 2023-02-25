@@ -2,10 +2,13 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
 import { ModalProvider } from './context/modal-context';
+import { ThemeProvider } from './context/theme-context';
 import './index.css';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <ModalProvider>
-    <App />
-  </ModalProvider>,
+  <ThemeProvider>
+    <ModalProvider>
+      <App />
+    </ModalProvider>
+  </ThemeProvider>,
 );
