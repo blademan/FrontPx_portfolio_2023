@@ -8,14 +8,50 @@ import FAQs from './sections/faqs/FAQs';
 import Contact from './sections/contact/Contact';
 import Footer from './sections/footer/Footer';
 import FloatingNav from './sections/floating-nav/FloatingNav';
-import Modal from './components/Modal';
+
 import Theme from './theme/Theme';
 import { useThemeContext } from './context/theme-context';
+import { useRef, useState, useEffect } from 'react';
 
 function App() {
   const { themeState } = useThemeContext();
+
+  const mainRef = useRef();
+  const [showFloatingNav, setShowFloatingNav] = useState(true);
+  const [siteYPosition, setSiteYPosition] = useState(0);
+
+  const showFloatingNavHandler = () => {
+    setShowFloatingNav(true);
+  };
+  const hideFloatingNavHandler = () => {
+    setShowFloatingNav(false);
+  };
+
+  const floatingNavToggleHandler = () => {
+    if (
+      siteYPosition < mainRef?.current?.getBoundingClientRect().y - 20 ||
+      siteYPosition > mainRef?.current?.getBoundingClientRect().y + 20
+    ) {
+      showFloatingNavHandler();
+    } else {
+      hideFloatingNavHandler();
+    }
+
+    setSiteYPosition(mainRef?.current?.getBoundingClientRect().y);
+  };
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      floatingNavToggleHandler();
+    }, 2000);
+
+    return () => {
+      clearInterval(timer);
+    };
+  }, [siteYPosition]);
+
   return (
-    <main className={`${themeState.primary} ${themeState.background}`}>
+    <main className={`${themeState.primary} ${themeState.background}`} ref={mainRef}>
       <Navbar />
       <Header />
       <About />
@@ -25,8 +61,8 @@ function App() {
       <FAQs />
       <Contact />
       <Footer />
-      <FloatingNav />
       <Theme />
+      {showFloatingNav && <FloatingNav />}
     </main>
   );
 }

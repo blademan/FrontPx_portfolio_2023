@@ -9,8 +9,6 @@ const initialState = JSON.parse(localStorage.getItem('themeSettings')) || {
 };
 
 export function ThemeProvider({ children }) {
-  console.log(JSON.parse(localStorage.getItem('themeSettings')));
-
   const [themeState, dispatchTheme] = useReducer(themeReducer, initialState);
 
   const themeHandler = (buttonClassName) => {

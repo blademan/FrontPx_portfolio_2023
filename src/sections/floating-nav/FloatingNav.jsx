@@ -4,7 +4,6 @@ import Scrollspy from 'react-scrollspy';
 import Nav from './Nav';
 
 export default function FloatingNav() {
-  console.log(data);
   return (
     <ul id="floating__nav" className={styles['floating__nav']}>
       <Scrollspy
