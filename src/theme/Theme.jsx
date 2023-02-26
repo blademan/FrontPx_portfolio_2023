@@ -6,7 +6,7 @@ import styles from './theme.module.css';
 
 export default function Theme() {
   return (
-    <Modal className="theme__modal">
+    <Modal cardClassName="theme__modal">
       <h3>Customize You Theme</h3>
       <small>Change the primary and background color to your preference</small>
       <div className={styles['theme__primary-wrapper']}>

@@ -10,7 +10,7 @@ export default function Services() {
       <div data-aos="fade-up" className={`container  ${styles.services__container}`}>
         {data.map(({ id, title, desc, icon: Icon }) => (
           <div key={id} className={styles.service}>
-            <Card className="service" theme="light">
+            <Card className="service">
               <div className={styles['service__icon']}>{<Icon />}</div>
               <div className="service__details">
                 <h4>{title}</h4>

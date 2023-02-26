@@ -3,7 +3,7 @@ import styles from './testimonials.module.css';
 
 export default function Testimonial({ slide }) {
   return (
-    <Card className="light">
+    <Card className="testimonial">
       <p>{slide.quote}</p>
       <div className={styles['testimonial__client']}>
         <div className={styles['testimonial__client-avatar']}>

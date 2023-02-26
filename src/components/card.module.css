@@ -1,3 +1,5 @@
+/* Main Card Styles */
+
 .card {
   background: var(--color-white);
   padding: 1.5rem;
@@ -12,16 +14,7 @@
   transform: translateY(-0.5rem);
 }
 
-.card.light {
-  background: var(--color-light);
-}
-
-.card.light:hover {
-  background: transparent;
-  border-color: var(--color-light);
-}
-
-/* About */
+/* About Styles*/
 .about__cards {
   margin: 3rem 0 1.5rem;
   display: grid;
@@ -37,14 +30,25 @@
   margin: 1rem 0;
 }
 
-/* Service */
+/* Service Styles*/
+
 .card.service {
   display: flex;
   align-items: flex-start;
   gap: 1rem;
 }
 
-/* Project */
+.card.service {
+  background: var(--color-light);
+}
+
+.card.service:hover {
+  background: transparent;
+  border-color: var(--color-light);
+}
+
+/* Project Styles */
+
 .card.portfolio__project {
   animation: animateProject 800ms ease-in forwards;
 }
@@ -72,6 +76,17 @@
 .portfolio__project p {
   display: block;
   margin: 0.5rem 0 2rem;
+}
+
+/* Testimonial */
+
+.card.testimonial {
+  background: var(--color-light);
+}
+
+.card.testimonial:hover {
+  background: transparent;
+  border-color: var(--color-light);
 }
 
 /* FAQ card */
@@ -140,7 +155,6 @@
   }
 }
 
-/* MEDIA QUERIES (phones) */
 @media screen and (max-width: 600px) {
   .card.theme__modal {
     width: var(--container-width-md);

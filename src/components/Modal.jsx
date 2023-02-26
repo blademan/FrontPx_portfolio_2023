@@ -3,7 +3,7 @@ import styles from './modal.module.css';
 import ReactDOM from 'react-dom';
 import { useModalContext } from '../context/modal-context';
 
-export default function Modal({ children, className }) {
+export default function Modal({ children, cardClassName }) {
   const { showModal, hideModalHandler } = useModalContext();
   return (
     <>
@@ -11,11 +11,12 @@ export default function Modal({ children, className }) {
         ReactDOM.createPortal(
           <>
             <section
-              onClick={() => hideModalHandler()}
+              onClick={hideModalHandler}
+              role="dialog"
               id="backdrop"
               className={styles.backdrop}
             ></section>
-            <Card className={className}>{children}</Card>
+            <Card className={cardClassName}>{children}</Card>
           </>,
           document.querySelector('#overlays'),
         )}
