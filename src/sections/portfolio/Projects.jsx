@@ -1,7 +1,7 @@
 import styles from './portfolio.module.css';
 import Project from './Project';
 
-export default function Projects({ projects }) {
+const Projects = ({ projects }) => {
   return (
     <div className={styles.portfolio__projects}>
       {projects.map((project) => (
@@ -9,4 +9,5 @@ export default function Projects({ projects }) {
       ))}
     </div>
   );
-}
+};
+export default Projects;

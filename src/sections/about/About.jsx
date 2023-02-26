@@ -1,17 +1,18 @@
 import AboutImage from '../../assets/about.jpg';
 import CV from '../../assets/cv.pdf';
 import { HiDownload } from 'react-icons/hi';
-import styles from './about.module.css';
 import data from './data';
 import Card from '../../components/Card';
+import styles from './about.module.css';
 
-export default function About() {
+const About = () => {
   return (
     <section id="about" className={styles.about}>
+      {/* AOS animation */}
       <div data-aos="fade-up" className={`container ${styles.about__container}`}>
         <div className={styles.about__left}>
           <div className={styles.about__portrait}>
-            <img src={AboutImage} alt="About Image" />
+            <img src={AboutImage} alt="My portrait" />
           </div>
         </div>
         <div className={styles.about__right}>
@@ -38,10 +39,12 @@ export default function About() {
             my resume below!
           </p>
           <a href={CV} download className={`btn primary ${styles.btn}`}>
-            Dowbload CV <HiDownload />
+            Download CV <HiDownload />
           </a>
         </div>
       </div>
     </section>
   );
-}
+};
+
+export default About;

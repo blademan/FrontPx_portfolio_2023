@@ -1,10 +1,9 @@
-import styles from './portfolio.module.css';
 import Projects from './Projects';
 import ProjectsCategories from './ProjectsCategories';
 import data from './data';
 import { useState } from 'react';
 
-export default function Portfolio() {
+const Portfolio = () => {
   const [projects, setProjects] = useState(data);
 
   const categories = data.map((item) => item.category);
@@ -36,4 +35,5 @@ export default function Portfolio() {
       </div>
     </section>
   );
-}
+};
+export default Portfolio;

@@ -2,7 +2,7 @@ import styles from './services.module.css';
 import data from './data';
 import Card from '../../components/Card';
 
-export default function Services() {
+const Services = () => {
   return (
     <section id="services">
       <h2 data-aos="fade-up">My Services</h2>
@@ -22,4 +22,5 @@ export default function Services() {
       </div>
     </section>
   );
-}
+};
+export default Services;

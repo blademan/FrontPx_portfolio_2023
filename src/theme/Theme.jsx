@@ -4,7 +4,7 @@ import PrimaryColor from './PrimaryColor';
 import BackgroundColor from './BackgroundColor';
 import styles from './theme.module.css';
 
-export default function Theme() {
+const Theme = () => {
   return (
     <Modal cardClassName="theme__modal">
       <h3>Customize You Theme</h3>
@@ -27,4 +27,5 @@ export default function Theme() {
       </div>
     </Modal>
   );
-}
+};
+export default Theme;

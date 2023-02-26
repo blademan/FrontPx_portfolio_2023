@@ -2,7 +2,7 @@ import data from './data';
 import FAQ from './FAQ';
 import styles from './faqs.module.css';
 
-export default function FAQs() {
+const FAQs = () => {
   return (
     <section id="faqs">
       <h2>Frequently Asked Questions</h2>
@@ -11,10 +11,12 @@ export default function FAQs() {
         some more questions, shoot me a message from the contact section!
       </p>
       <div className={`container ${styles.faqs__container}`} data-aos="fade-up">
-        {data.map((faq) => (
-          <FAQ key={faq.id} question={faq.question} answer={faq.answer} />
+        {data.map(({ id, question, answer }) => (
+          <FAQ key={id} question={question} answer={answer} />
         ))}
       </div>
     </section>
   );
-}
+};
+
+export default FAQs;

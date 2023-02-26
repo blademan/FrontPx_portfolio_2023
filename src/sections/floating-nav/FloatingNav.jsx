@@ -1,11 +1,11 @@
-import styles from './floating-nav.module.css';
 import data from './data';
 import Scrollspy from 'react-scrollspy';
 import Nav from './Nav';
+import styles from './floating-nav.module.css';
 
-export default function FloatingNav() {
+const FloatingNav = () => {
   return (
-    <ul id="floating__nav" className={styles['floating__nav']}>
+    <ul id="floating__nav" className={`${styles.floating__nav}`}>
       <Scrollspy
         offset={-400}
         className="scrollspy"
@@ -18,4 +18,6 @@ export default function FloatingNav() {
       </Scrollspy>
     </ul>
   );
-}
+};
+
+export default FloatingNav;

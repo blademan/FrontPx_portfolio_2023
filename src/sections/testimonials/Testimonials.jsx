@@ -11,7 +11,7 @@ import data from './data';
 import styles from './testimonials.module.css';
 import Testimonial from './Testimonial';
 
-export default function Testimonials() {
+const Testimonials = () => {
   return (
     <section className={styles.testimonials} id="testimonials">
       <h2>What My Clients Say</h2>
@@ -40,4 +40,5 @@ export default function Testimonials() {
       </div>
     </section>
   );
-}
+};
+export default Testimonials;

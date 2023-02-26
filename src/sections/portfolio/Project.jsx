@@ -1,7 +1,7 @@
 import styles from './portfolio.module.css';
 import Card from '../../components/Card';
 
-export default function Project({ project }) {
+const Project = ({ project }) => {
   return (
     <div className={styles.portfolio__project} data-aos="fade-up">
       <Card key={project.id} className="portfolio__project">
@@ -31,4 +31,6 @@ export default function Project({ project }) {
       </Card>
     </div>
   );
-}
+};
+
+export default Project;

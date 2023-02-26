@@ -1,28 +1,31 @@
 import styles from './footer.module.css';
 import data from './data';
 
-export default function Footer() {
+const Footer = () => {
+  const { links, socials } = data;
   return (
     <footer id="footer">
-      <div className="container">
+      <nav className="container">
         <ul className={styles.nav__menu}>
-          {data.links.map(({ id, link, title }) => (
+          {links.map(({ id, link, title }) => (
             <li key={id}>
               <a href={link}>{title}</a>
             </li>
           ))}
         </ul>
         <div className={styles.footer__socials}>
-          {data.socials.map(({ id, link, icon: Icon }) => (
-            <a key={id} href={link}>
+          {socials.map(({ id, link, icon: Icon }) => (
+            <a key={id} href={link} target="_blank" rel="noopener noreferrer">
               {<Icon />}
             </a>
           ))}
         </div>
-      </div>
+      </nav>
       <div className={styles.footer__copyright}>
-        <small>{new Date().getFullYear()} FrontPX TUTORIALS © All Rights Reserved</small>
+        <small>{new Date().getFullYear()} FrontPX Portfolio © All Rights Reserved</small>
       </div>
     </footer>
   );
-}
+};
+
+export default Footer;

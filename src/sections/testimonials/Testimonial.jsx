@@ -1,7 +1,7 @@
 import Card from '../../components/Card';
 import styles from './testimonials.module.css';
 
-export default function Testimonial({ slide }) {
+const Testimonial = ({ slide }) => {
   return (
     <Card className="testimonial">
       <p>{slide.quote}</p>
@@ -16,4 +16,5 @@ export default function Testimonial({ slide }) {
       </div>
     </Card>
   );
-}
+};
+export default Testimonial;

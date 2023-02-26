@@ -5,7 +5,7 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import styles from './header.module.css';
 
-export default function Header() {
+const Header = () => {
   useEffect(() => {
     AOS.init({ duration: 2000 });
   });
@@ -39,4 +39,6 @@ export default function Header() {
       </div>
     </header>
   );
-}
+};
+
+export default Header;

@@ -1,6 +1,6 @@
 import styles from './portfolio.module.css';
 
-export default function CategoryButton({ category, className, changeCategoryOnClick }) {
+const CategoryButton = ({ category, className, changeCategoryOnClick }) => {
   return (
     <button
       onClick={() => changeCategoryOnClick(category)}
@@ -9,4 +9,5 @@ export default function CategoryButton({ category, className, changeCategoryOnCl
       {category}
     </button>
   );
-}
+};
+export default CategoryButton;

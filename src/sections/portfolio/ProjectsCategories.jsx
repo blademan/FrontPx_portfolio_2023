@@ -2,7 +2,7 @@ import CategoryButton from './CategoryButton';
 import styles from './portfolio.module.css';
 import { useState } from 'react';
 
-export default function ProjectsCategories({ categories, filterProjectsHandler }) {
+const ProjectsCategories = ({ categories, filterProjectsHandler }) => {
   const [activeCategory, setActiveCategory] = useState('all');
 
   function onChangeCategory(active) {
@@ -24,4 +24,5 @@ export default function ProjectsCategories({ categories, filterProjectsHandler }
       })}
     </div>
   );
-}
+};
+export default ProjectsCategories;
