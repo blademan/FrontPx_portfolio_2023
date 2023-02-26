@@ -8,7 +8,7 @@ import Card from '../../components/Card';
 export default function About() {
   return (
     <section id="about" className={styles.about}>
-      <div className={`container ${styles.about__container}`}>
+      <div data-aos="fade-up" className={`container ${styles.about__container}`}>
         <div className={styles.about__left}>
           <div className={styles.about__portrait}>
             <img src={AboutImage} alt="About Image" />

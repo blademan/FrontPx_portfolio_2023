@@ -10,7 +10,7 @@ export default function FAQs() {
         Here are some questions I usually get. Click to toggle the answer, and if you still have
         some more questions, shoot me a message from the contact section!
       </p>
-      <div className={`container ${styles.faqs__container}`}>
+      <div className={`container ${styles.faqs__container}`} data-aos="fade-up">
         {data.map((faq) => (
           <FAQ key={faq.id} question={faq.question} answer={faq.answer} />
         ))}

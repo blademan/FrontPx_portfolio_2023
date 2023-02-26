@@ -5,9 +5,9 @@ import Card from '../../components/Card';
 export default function Services() {
   return (
     <section id="services">
-      <h2>My Services</h2>
-      <p>I give you the best in all the services below</p>
-      <div className={`container  ${styles.services__container}`}>
+      <h2 data-aos="fade-up">My Services</h2>
+      <p data-aos="fade-up">I give you the best in all the services below</p>
+      <div data-aos="fade-up" className={`container  ${styles.services__container}`}>
         {data.map(({ id, title, desc, icon: Icon }) => (
           <div key={id} className={styles.service}>
             <Card className="service" theme="light">

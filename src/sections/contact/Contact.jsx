@@ -6,7 +6,7 @@ export default function Contact() {
     <section id="contact">
       <h2>Get In Touch</h2>
       <p>Shoot me a message via any of the links below!</p>
-      <div className={`container ${styles.contact__container}`}>
+      <div data-aos="fade-up" className={`container ${styles.contact__container}`}>
         {data.map(({ id, link, icon: Icon }) => (
           <a key={id} href={link} target="_blank" rel="noopener noreferrer">
             {<Icon />}

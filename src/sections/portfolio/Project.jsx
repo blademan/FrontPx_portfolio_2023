@@ -3,7 +3,7 @@ import Card from '../../components/Card';
 
 export default function Project({ project }) {
   return (
-    <div className={styles.portfolio__project}>
+    <div className={styles.portfolio__project} data-aos="fade-up">
       <Card key={project.id} className="portfolio__project">
         <div className={styles['portfolio__project-image']}>
           <img src={project.image} alt="Portfolio Project Image" />
