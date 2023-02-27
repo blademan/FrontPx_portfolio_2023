@@ -8,7 +8,6 @@ import SocialLink from '../../components/SocialLink';
 import React from 'react';
 
 const Header = () => {
-  console.log('Header render');
   useEffect(() => {
     AOS.init({ duration: 2000 });
   }, []);
