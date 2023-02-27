@@ -1,3 +1,4 @@
+import React from 'react';
 import AboutImage from '../../assets/about.jpg';
 import CV from '../../assets/cv.pdf';
 import { HiDownload } from 'react-icons/hi';
@@ -47,4 +48,4 @@ const About = () => {
   );
 };
 
-export default About;
+export default React.memo(About);

@@ -1,3 +1,4 @@
+import React from 'react';
 import data from './data';
 import styles from './contact.module.css';
 
@@ -18,4 +19,4 @@ const Contact = () => {
     </section>
   );
 };
-export default Contact;
+export default React.memo(Contact);

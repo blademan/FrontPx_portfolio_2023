@@ -13,6 +13,8 @@ export default function Modal({ children, cardClassName }) {
             <section
               onClick={hideModalHandler}
               role="dialog"
+              aria-modal="true"
+              aria-labelledby="modal-title"
               id="backdrop"
               className={styles.backdrop}
             ></section>

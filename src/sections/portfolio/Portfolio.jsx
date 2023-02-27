@@ -1,3 +1,4 @@
+import React from 'react';
 import Projects from './Projects';
 import ProjectsCategories from './ProjectsCategories';
 import data from './data';
@@ -36,4 +37,4 @@ const Portfolio = () => {
     </section>
   );
 };
-export default Portfolio;
+export default React.memo(Portfolio);

@@ -1,3 +1,4 @@
+import React from 'react';
 import data from './data';
 import FAQ from './FAQ';
 import styles from './faqs.module.css';
@@ -19,4 +20,4 @@ const FAQs = () => {
   );
 };
 
-export default FAQs;
+export default React.memo(FAQs);

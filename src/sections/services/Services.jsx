@@ -1,3 +1,4 @@
+import React from 'react';
 import styles from './services.module.css';
 import data from './data';
 import Card from '../../components/Card';
@@ -23,4 +24,4 @@ const Services = () => {
     </section>
   );
 };
-export default Services;
+export default React.memo(Services);

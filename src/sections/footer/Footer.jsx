@@ -1,5 +1,9 @@
+import React from 'react';
 import styles from './footer.module.css';
 import data from './data';
+import SocialLink from '../../components/SocialLink';
+
+const thisYear = new Date().getFullYear();
 
 const Footer = () => {
   const { links, socials } = data;
@@ -14,18 +18,16 @@ const Footer = () => {
           ))}
         </ul>
         <div className={styles.footer__socials}>
-          {socials.map(({ id, link, icon: Icon }) => (
-            <a key={id} href={link} target="_blank" rel="noopener noreferrer">
-              {<Icon />}
-            </a>
+          {socials.map((item) => (
+            <SocialLink key={item.id} item={item} />
           ))}
         </div>
       </nav>
       <div className={styles.footer__copyright}>
-        <small>{new Date().getFullYear()} FrontPX Portfolio © All Rights Reserved</small>
+        <small>{thisYear} FrontPX Portfolio © All Rights Reserved</small>
       </div>
     </footer>
   );
 };
 
-export default Footer;
+export default React.memo(Footer);

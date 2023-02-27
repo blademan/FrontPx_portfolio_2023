@@ -1,3 +1,4 @@
+import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay } from 'swiper';
 // Import Swiper styles
@@ -41,4 +42,4 @@ const Testimonials = () => {
     </section>
   );
 };
-export default Testimonials;
+export default React.memo(Testimonials);

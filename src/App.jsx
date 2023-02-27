@@ -1,14 +1,15 @@
-import Header from './sections/header/Header';
-import Navbar from './sections/navbar/Navbar';
-import About from './sections/about/About';
-import Services from './sections/services/Services';
-import Portfolio from './sections/portfolio/Portfolio';
-import Testimonials from './sections/testimonials/Testimonials';
-import FAQs from './sections/faqs/FAQs';
-import Contact from './sections/contact/Contact';
-import Footer from './sections/footer/Footer';
-import FloatingNav from './sections/floating-nav/FloatingNav';
-
+import {
+  Header,
+  Navbar,
+  About,
+  Services,
+  Portfolio,
+  Testimonials,
+  FAQs,
+  Contact,
+  Footer,
+  FloatingNav,
+} from './sections';
 import Theme from './theme/Theme';
 import { useThemeContext } from './context/theme-context';
 import { useRef, useState, useEffect } from 'react';
